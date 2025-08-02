@@ -27,6 +27,9 @@ Thumbs.db
 # Environment variables
 .env
 
+#Docker Images
+.tar
+
 # Build outputs
 build/
 dist/
