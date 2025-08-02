@@ -39,7 +39,7 @@ class AnalyseC02Data:
         df["jahr"] = pd.to_datetime(df["jahr"].astype(str) + "-01-01")
 
         # Kein groupby — keine Aggregation!
-        df = df[["jahr", "gemeinde_name", "einwohner", "c02_emissions", "energiebezugsflaeche"]].copy()
+        df = df[["jahr", "gemeinde_name", "einwohner", "c02_emissions", "energiebezugsflaeche", "loaded_at"]].copy()
 
         self.tables["lookerstudio_base"] = df
 
