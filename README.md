@@ -6,7 +6,7 @@
 
 | Dienst              | Zweck                                 | Warum gewählt                                               |
 |---------------------|----------------------------------------|-------------------------------------------------------------|
-| **Cloud Run**        | Hoster für Python-API-Logik           | - Vollständig verwaltet<br>- Skaliert automatisch<br>- Einfach via HTTP triggerbar |
+| **Cloud Run Service**        | Hoster für Python-API-Logik           | - Vollständig verwaltet<br>- Skaliert automatisch<br>- Einfach via HTTP triggerbar |
 | **Cloud Scheduler**  | Automatisierung des Trigger-Vorgangs  | - Cron-ähnlich<br>- Zuverlässig<br>- Native Authentifizierung mit Cloud Run |
 | **BigQuery**         | Datenziel / Cloud Data Warehouse      | - Hochperformantes SQL-Backend<br>- Kein Infrastruktur-Overhead<br>- Ideal für Analysezwecke |
 | **Docker**           | Verpackung & Transport der App        | - Portabel<br>- Einheitlich über lokale und Cloud-Umgebung |
@@ -66,16 +66,16 @@ C02_TG/
 
 ## ⚙️ Ausführung
 
-### Manuelle Ausführung über CLI:
-```bash
-gcloud scheduler jobs run run-daily-analysis --location=europe-west1
+### Manuelle Ausführung über Cloud Scheduler:
+```
+https://console.cloud.google.com/cloudscheduler?project=c02-tg&inv=1&invt=Ab5Hjg
 ```
 
 ### Automatische Ausführung:
-Täglich über **Cloud Scheduler**, geplant um **05:00 Uhr (CET)**  
+Täglich über **Cloud Scheduler**, geplant um **08:00 Uhr (CET)**  
 Zeitplan:  
 ```cron
-0 5 * * *
+0 8 * * *
 ```
 
 ---
